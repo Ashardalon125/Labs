@@ -1,0 +1,32 @@
+1) Write a function to calculate the exact number of nuclei at a later time.
+
+#Variable Declarations/Initializations
+decay=c #a constant decay constant
+iPop=d # a constant initial population
+
+#Imports
+from math import exp
+import pylab
+import numpy as np
+
+#Functions
+def finalPopulation(iPop,decay,fTime):
+    """This gives the exact value of the population given an initial population, decay constant, and final time"""
+    return fPop=iPop*exp(-decay*fTime)
+
+2) Write a function to calculate the numerical approximation of the number of nuclei at a later time.
+
+def numericalPopulation(nNaught,decay,fTime):
+    """This gives a Taylor series approximation of the population given and initial population, decay constant, and final time"""
+    return fPop=nNaught*(1-decay*fTime)
+    
+ 
+ 4) Plot the output of the exact results on a plot.
+ 
+ t=linspace(0,10,100)
+ N=[]
+ for i in range(t):
+     N.append(finalPopulation(iPop,decay,t[i]))
+     
+ np.plot(t,N,"o")
+ np.show()
